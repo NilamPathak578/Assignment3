@@ -1,3 +1,4 @@
+import 'package:challange3_app/views/SecondPAge.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -17,8 +18,6 @@ class HomePage extends StatelessWidget {
                 "assets/person.png",
               ),
             ),
-            //
-            //alignment: Alignment.center,
           ),
         ],
       ),
@@ -90,10 +89,18 @@ class HomePage extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 16.0),
                       child: Row(
                         children: [
-                          Icon(
-                            Icons.settings,
-                            size: 50,
-                            color: Colors.black38,
+                          FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SecondPage()));
+                            },
+                            child: Icon(
+                              Icons.settings,
+                              size: 50,
+                              color: Colors.black38,
+                            ),
                           ),
                           SizedBox(
                             width: 14,
